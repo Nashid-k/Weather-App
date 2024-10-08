@@ -60,7 +60,7 @@ search.addEventListener('click', () => {
                     break;
 
                 default:
-                    image.src = '';
+                    image.src = 'images/not found 404.avif';
             }
 
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
@@ -68,14 +68,12 @@ search.addEventListener('click', () => {
             humidity.innerHTML = `${json.main.humidity}%`;
             wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
 
+       
             weatherBox.style.display = '';
             weatherDetails.style.display = '';
             weatherBox.classList.add('fadeIn');
             weatherDetails.classList.add('fadeIn');
             container.style.height = '590px';
 
-
         });
-
-
 });
